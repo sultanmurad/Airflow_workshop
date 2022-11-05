@@ -20,22 +20,6 @@ pg_db = 'test'
 
 
 """
-Save rates in pustgresql
-"""
-def insert_data(hist_date, data, rate_date, value_):
-    ingest_datetime = strftime("%Y-%m-%d %H:%M:%S", localtime())
-    
-    conn = psycopg2.connect(host=pg_hostname, port=pg_port, user=pg_username, password=pg_pass, database=pg_db)
-    cursor = conn.cursor()
-    if hist_date != "latest":
-        cursor.execute(f"DELETE FROM {table_name} WHERE rate_date = '{rate_date}';")
-        conn.commit()    
-    cursor.execute(f"INSERT INTO {table_name} (ingest_datetime, rate_date, rate_base, rate_target, value_ ) VALUES('{ingest_datetime}','{rate_date}', '{rate_base}', '{rate_target}', '{value_}');")
-    conn.commit() 
-    cursor.close()
-    conn.close()	
-	
-"""
 Run uploading code from exchangerate.host API
 """
 def import_codes():
@@ -53,5 +37,21 @@ def import_codes():
     value_ = str(decimal.Decimal(data['rates']['USD']))[:20]
     
     insert_data(hist_date, data, rate_date, value_)
+
+"""
+Save rates in pustgresql
+"""
+def insert_data(hist_date, data, rate_date, value_):
+    ingest_datetime = strftime("%Y-%m-%d %H:%M:%S", localtime())
     
+    conn = psycopg2.connect(host=pg_hostname, port=pg_port, user=pg_username, password=pg_pass, database=pg_db)
+    cursor = conn.cursor()
+    if hist_date != "latest":
+        cursor.execute(f"DELETE FROM {table_name} WHERE rate_date = '{rate_date}';")
+        conn.commit()    
+    cursor.execute(f"INSERT INTO {table_name} (ingest_datetime, rate_date, rate_base, rate_target, value_ ) VALUES('{ingest_datetime}','{rate_date}', '{rate_base}', '{rate_target}', '{value_}');")
+    conn.commit() 
+    cursor.close()
+    conn.close()	
+	
 import_codes()
