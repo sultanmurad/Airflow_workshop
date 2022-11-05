@@ -1,0 +1,56 @@
+[2022-08-20 11:34:42,148] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.waiting_for_file scheduled__2022-08-20T06:00:00+00:00 [queued]>
+[2022-08-20 11:34:43,504] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.waiting_for_file scheduled__2022-08-20T06:00:00+00:00 [queued]>
+[2022-08-20 11:34:43,523] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-20 11:34:43,534] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-08-20 11:34:43,538] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-20 11:34:44,502] {taskinstance.py:1397} INFO - Executing <Task(FileSensor): waiting_for_file> on 2022-08-20 06:00:00+00:00
+[2022-08-20 11:34:44,607] {standard_task_runner.py:52} INFO - Started process 4767 to run task
+[2022-08-20 11:34:44,716] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'waiting_for_file', 'scheduled__2022-08-20T06:00:00+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag.py', '--cfg-path', '/tmp/tmpxgtlyvay', '--error-file', '/tmp/tmp66s8f7mi']
+[2022-08-20 11:34:44,743] {standard_task_runner.py:80} INFO - Job 44: Subtask waiting_for_file
+[2022-08-20 11:34:47,515] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.waiting_for_file scheduled__2022-08-20T06:00:00+00:00 [running]> on host 00f41d9230c6
+[2022-08-20 11:34:50,890] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=waiting_for_file
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-20T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-20T06:00:00+00:00
+[2022-08-20 11:34:51,138] {base.py:68} INFO - Using connection ID 'ya_***_workshop_file_path' for task execution.
+[2022-08-20 11:34:51,143] {filesystem.py:58} INFO - Poking for file C:/Users/AbduevSA-LA/Desktop/Yandex/Airflow_workshop/workshop_***-main/
+[2022-08-20 11:34:51,544] {taskinstance.py:1873} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2022-08-20 11:34:51,779] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-20 11:34:52,396] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-08-20 11:36:54,736] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.waiting_for_file scheduled__2022-08-20T06:00:00+00:00 [queued]>
+[2022-08-20 11:36:55,011] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.waiting_for_file scheduled__2022-08-20T06:00:00+00:00 [queued]>
+[2022-08-20 11:36:55,052] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-20 11:36:55,055] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-08-20 11:36:55,058] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-20 11:36:55,204] {taskinstance.py:1397} INFO - Executing <Task(FileSensor): waiting_for_file> on 2022-08-20 06:00:00+00:00
+[2022-08-20 11:36:55,220] {standard_task_runner.py:52} INFO - Started process 4843 to run task
+[2022-08-20 11:36:55,259] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'waiting_for_file', 'scheduled__2022-08-20T06:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag.py', '--cfg-path', '/tmp/tmp797qfmbk', '--error-file', '/tmp/tmpcqp0fpxd']
+[2022-08-20 11:36:55,263] {standard_task_runner.py:80} INFO - Job 47: Subtask waiting_for_file
+[2022-08-20 11:36:55,681] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.waiting_for_file scheduled__2022-08-20T06:00:00+00:00 [running]> on host 00f41d9230c6
+[2022-08-20 11:36:55,985] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=waiting_for_file
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-20T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-20T06:00:00+00:00
+[2022-08-20 11:36:56,063] {base.py:68} INFO - Using connection ID 'ya_***_workshop_file_path' for task execution.
+[2022-08-20 11:36:56,066] {filesystem.py:58} INFO - Poking for file C:/Users/AbduevSA-LA/Desktop/Yandex/Airflow_workshop/workshop_***-main/
+[2022-08-20 11:36:56,069] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 288, in execute
+    raise AirflowSensorTimeout(f"Snap. Time is OUT. DAG id: {log_dag_id}")
+airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT. DAG id: yandex-rates-test
+[2022-08-20 11:36:56,116] {taskinstance.py:1420} INFO - Immediate failure requested. Marking task as FAILED. dag_id=yandex-rates-test, task_id=waiting_for_file, execution_date=20220820T060000, start_date=20220820T113654, end_date=20220820T113656
+[2022-08-20 11:36:56,183] {standard_task_runner.py:97} ERROR - Failed to execute job 47 for task waiting_for_file (Snap. Time is OUT. DAG id: yandex-rates-test; 4843)
+[2022-08-20 11:36:56,281] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-08-20 11:36:56,402] {logging_mixin.py:115} INFO - {'conf': <***.configuration.AirflowConfigParser object at 0x7fdb0783b690>, 'dag': <DAG: yandex-rates-test>, 'dag_run': <DagRun yandex-rates-test @ 2022-08-20 06:00:00+00:00: scheduled__2022-08-20T06:00:00+00:00, externally triggered: False>, 'data_interval_end': DateTime(2022, 8, 20, 9, 0, 0, tzinfo=Timezone('UTC')), 'data_interval_start': DateTime(2022, 8, 20, 6, 0, 0, tzinfo=Timezone('UTC')), 'ds': '2022-08-20', 'ds_nodash': '20220820', 'execution_date': DateTime(2022, 8, 20, 6, 0, 0, tzinfo=Timezone('UTC')), 'inlets': [], 'logical_date': DateTime(2022, 8, 20, 6, 0, 0, tzinfo=Timezone('UTC')), 'macros': <module '***.macros' from '/home/***/.local/lib/python3.7/site-packages/***/macros/__init__.py'>, 'next_ds': '2022-08-20', 'next_ds_nodash': '20220820', 'next_execution_date': DateTime(2022, 8, 20, 9, 0, 0, tzinfo=Timezone('UTC')), 'outlets': [], 'params': {}, 'prev_data_interval_start_success': None, 'prev_data_interval_end_success': None, 'prev_ds': '2022-08-20', 'prev_ds_nodash': '20220820', 'prev_execution_date': DateTime(2022, 8, 20, 3, 0, 0, tzinfo=Timezone('UTC')), 'prev_execution_date_success': None, 'prev_start_date_success': None, 'run_id': 'scheduled__2022-08-20T06:00:00+00:00', 'task': <Task(FileSensor): waiting_for_file>, 'task_instance': <TaskInstance: yandex-rates-test.waiting_for_file scheduled__2022-08-20T06:00:00+00:00 [failed]>, 'task_instance_key_str': 'yandex-rates-test__waiting_for_file__20220820', 'test_mode': False, 'ti': <TaskInstance: yandex-rates-test.waiting_for_file scheduled__2022-08-20T06:00:00+00:00 [failed]>, 'tomorrow_ds': '2022-08-21', 'tomorrow_ds_nodash': '20220821', 'ts': '2022-08-20T06:00:00+00:00', 'ts_nodash': '20220820T060000', 'ts_nodash_with_tz': '20220820T060000+0000', 'var': {'json': None, 'value': None}, 'conn': None, 'yesterday_ds': '2022-08-19', 'yesterday_ds_nodash': '20220819', 'exception': AirflowSensorTimeout('Snap. Time is OUT. DAG id: yandex-rates-test')}
+[2022-08-20 11:36:56,403] {logging_mixin.py:115} INFO - Sensor timed out
+[2022-08-20 11:36:56,488] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

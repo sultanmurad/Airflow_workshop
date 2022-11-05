@@ -1,0 +1,28 @@
+[2022-11-05 16:14:01,451] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.bash_task manual__2022-11-05T16:13:52.395507+00:00 [queued]>
+[2022-11-05 16:14:01,504] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.bash_task manual__2022-11-05T16:13:52.395507+00:00 [queued]>
+[2022-11-05 16:14:01,506] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-05 16:14:01,507] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-11-05 16:14:01,508] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-05 16:14:01,610] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): bash_task> on 2022-11-05 16:13:52.395507+00:00
+[2022-11-05 16:14:01,626] {standard_task_runner.py:52} INFO - Started process 5177 to run task
+[2022-11-05 16:14:01,662] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'bash_task', 'manual__2022-11-05T16:13:52.395507+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmpf7uapctu', '--error-file', '/tmp/tmpjgkp93ob']
+[2022-11-05 16:14:01,666] {standard_task_runner.py:80} INFO - Job 26: Subtask bash_task
+[2022-11-05 16:14:01,978] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.bash_task manual__2022-11-05T16:13:52.395507+00:00 [running]> on host ec0dc6e942fe
+[2022-11-05 16:14:02,471] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=bash_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-05T16:13:52.395507+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-05T16:13:52.395507+00:00
+[2022-11-05 16:14:02,481] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-11-05 16:14:02,485] {subprocess.py:74} INFO - Running command: ['bash', '-c', "echo 'Hello, World!'"]
+[2022-11-05 16:14:02,542] {subprocess.py:85} INFO - Output:
+[2022-11-05 16:14:02,545] {subprocess.py:92} INFO - Hello, World!
+[2022-11-05 16:14:02,548] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-11-05 16:14:02,768] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=bash_task, execution_date=20221105T161352, start_date=20221105T161401, end_date=20221105T161402
+[2022-11-05 16:14:02,929] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-05 16:14:03,421] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,9 +1,5 @@
 .idea/
 notebooks/.ipynb_checkpoints/
 notebooks/__pycache__/
-presentation/.~lock.*
-presentation/
 Preparation_to_workshop.txt
-airflow/dags/*
-airflow/logs/*
-airflow/plugins/*
+

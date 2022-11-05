@@ -1,0 +1,34 @@
+[2022-08-16 15:14:43,267] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.bash_task manual__2022-08-16T15:14:40.120278+00:00 [queued]>
+[2022-08-16 15:14:43,291] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.bash_task manual__2022-08-16T15:14:40.120278+00:00 [queued]>
+[2022-08-16 15:14:43,292] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-16 15:14:43,293] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-08-16 15:14:43,294] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-16 15:14:43,322] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): bash_task> on 2022-08-16 15:14:40.120278+00:00
+[2022-08-16 15:14:43,337] {standard_task_runner.py:52} INFO - Started process 6504 to run task
+[2022-08-16 15:14:43,347] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'bash_task', 'manual__2022-08-16T15:14:40.120278+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag.py', '--cfg-path', '/tmp/tmptd02kcjd', '--error-file', '/tmp/tmplxeahmvv']
+[2022-08-16 15:14:43,352] {standard_task_runner.py:80} INFO - Job 22: Subtask bash_task
+[2022-08-16 15:14:43,508] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.bash_task manual__2022-08-16T15:14:40.120278+00:00 [running]> on host b232b3e4166c
+[2022-08-16 15:14:43,692] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=bash_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-16T15:14:40.120278+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-16T15:14:40.120278+00:00
+[2022-08-16 15:14:43,697] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-08-16 15:14:43,698] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'mkdir C:/Users/AbduevSA-LA/Desktop/Yandex/Airflow_workshop/workshop_***-main/***_workshop_files']
+[2022-08-16 15:14:43,718] {subprocess.py:85} INFO - Output:
+[2022-08-16 15:14:43,726] {subprocess.py:92} INFO - mkdir: cannot create directory ‘C:/Users/AbduevSA-LA/Desktop/Yandex/Airflow_workshop/workshop_***-main/***_workshop_files’: No such file or directory
+[2022-08-16 15:14:43,728] {subprocess.py:96} INFO - Command exited with return code 1
+[2022-08-16 15:14:43,769] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-08-16 15:14:43,800] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=yandex-rates-test, task_id=bash_task, execution_date=20220816T151440, start_date=20220816T151443, end_date=20220816T151443
+[2022-08-16 15:14:43,824] {standard_task_runner.py:97} ERROR - Failed to execute job 22 for task bash_task (Bash command failed. The command returned a non-zero exit code 1.; 6504)
+[2022-08-16 15:14:43,849] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-08-16 15:14:43,916] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

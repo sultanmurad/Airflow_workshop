@@ -1,0 +1,23 @@
+[2022-08-19 12:47:32,013] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.import_rates scheduled__2022-08-19T09:00:00+00:00 [queued]>
+[2022-08-19 12:47:32,043] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.import_rates scheduled__2022-08-19T09:00:00+00:00 [queued]>
+[2022-08-19 12:47:32,045] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-19 12:47:32,050] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-08-19 12:47:32,052] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-19 12:47:32,118] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): import_rates> on 2022-08-19 09:00:00+00:00
+[2022-08-19 12:47:32,126] {standard_task_runner.py:52} INFO - Started process 2202 to run task
+[2022-08-19 12:47:32,143] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'import_rates', 'scheduled__2022-08-19T09:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag.py', '--cfg-path', '/tmp/tmpo_84an4o', '--error-file', '/tmp/tmp_onv7bqf']
+[2022-08-19 12:47:32,149] {standard_task_runner.py:80} INFO - Job 4: Subtask import_rates
+[2022-08-19 12:47:32,314] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.import_rates scheduled__2022-08-19T09:00:00+00:00 [running]> on host 00f41d9230c6
+[2022-08-19 12:47:32,956] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=import_rates
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-19T09:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-19T09:00:00+00:00
+[2022-08-19 12:47:34,773] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-19 12:47:35,419] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=import_rates, execution_date=20220819T090000, start_date=20220819T124732, end_date=20220819T124735
+[2022-08-19 12:47:35,825] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-19 12:47:36,606] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

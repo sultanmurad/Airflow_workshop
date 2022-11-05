@@ -1,0 +1,80 @@
+[2022-08-20 07:38:45,383] {processor.py:153} INFO - Started process (PID=10902) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 07:38:45,393] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 07:38:45,432] {logging_mixin.py:115} INFO - [2022-08-20 07:38:45,432] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 07:38:48,234] {logging_mixin.py:115} INFO - [2022-08-20 07:38:48,234] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 07:38:50,129] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 07:39:06,139] {logging_mixin.py:115} INFO - [2022-08-20 07:39:06,138] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 07:39:08,300] {logging_mixin.py:115} INFO - [2022-08-20 07:39:08,300] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T06:00:00+00:00, run_after=2022-08-20T09:00:00+00:00
+[2022-08-20 07:39:09,204] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 24.900 seconds
+[2022-08-20 10:22:53,497] {processor.py:153} INFO - Started process (PID=11010) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 10:22:53,523] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 10:22:53,538] {logging_mixin.py:115} INFO - [2022-08-20 10:22:53,538] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 10:22:55,874] {logging_mixin.py:115} INFO - [2022-08-20 10:22:55,874] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 10:22:57,831] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 10:23:01,408] {logging_mixin.py:115} INFO - [2022-08-20 10:23:01,374] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 10:23:05,012] {logging_mixin.py:115} INFO - [2022-08-20 10:23:05,012] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T09:00:00+00:00, run_after=2022-08-20T12:00:00+00:00
+[2022-08-20 10:23:05,759] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 12.692 seconds
+[2022-08-20 10:24:25,548] {processor.py:153} INFO - Started process (PID=11080) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 10:24:25,582] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 10:24:25,584] {logging_mixin.py:115} INFO - [2022-08-20 10:24:25,584] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 10:24:26,537] {logging_mixin.py:115} INFO - [2022-08-20 10:24:26,536] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 10:24:27,481] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 10:24:29,506] {logging_mixin.py:115} INFO - [2022-08-20 10:24:29,506] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 10:24:30,373] {logging_mixin.py:115} INFO - [2022-08-20 10:24:30,373] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T09:00:00+00:00, run_after=2022-08-20T12:00:00+00:00
+[2022-08-20 10:24:30,810] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 5.333 seconds
+[2022-08-20 11:34:44,705] {processor.py:153} INFO - Started process (PID=11150) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:34:44,709] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 11:34:44,714] {logging_mixin.py:115} INFO - [2022-08-20 11:34:44,714] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:34:45,276] {logging_mixin.py:115} INFO - [2022-08-20 11:34:45,275] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 11:34:45,907] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:34:46,878] {logging_mixin.py:115} INFO - [2022-08-20 11:34:46,878] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 11:34:47,533] {logging_mixin.py:115} INFO - [2022-08-20 11:34:47,533] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T09:00:00+00:00, run_after=2022-08-20T12:00:00+00:00
+[2022-08-20 11:34:48,058] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 3.436 seconds
+[2022-08-20 11:35:30,243] {processor.py:153} INFO - Started process (PID=11204) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:35:30,257] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 11:35:30,304] {logging_mixin.py:115} INFO - [2022-08-20 11:35:30,303] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:35:30,724] {logging_mixin.py:115} INFO - [2022-08-20 11:35:30,724] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 11:35:30,846] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:35:31,867] {logging_mixin.py:115} INFO - [2022-08-20 11:35:31,867] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 11:35:32,360] {logging_mixin.py:115} INFO - [2022-08-20 11:35:32,359] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T09:00:00+00:00, run_after=2022-08-20T12:00:00+00:00
+[2022-08-20 11:35:32,502] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 2.298 seconds
+[2022-08-20 11:36:03,271] {processor.py:153} INFO - Started process (PID=11257) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:36:03,289] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 11:36:03,296] {logging_mixin.py:115} INFO - [2022-08-20 11:36:03,295] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:36:03,577] {logging_mixin.py:115} INFO - [2022-08-20 11:36:03,577] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 11:36:03,780] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:36:04,138] {logging_mixin.py:115} INFO - [2022-08-20 11:36:04,138] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 11:36:04,277] {logging_mixin.py:115} INFO - [2022-08-20 11:36:04,277] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T09:00:00+00:00, run_after=2022-08-20T12:00:00+00:00
+[2022-08-20 11:36:04,330] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 1.074 seconds
+[2022-08-20 11:36:37,668] {processor.py:153} INFO - Started process (PID=11310) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:36:37,680] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 11:36:37,724] {logging_mixin.py:115} INFO - [2022-08-20 11:36:37,723] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:36:38,295] {logging_mixin.py:115} INFO - [2022-08-20 11:36:38,295] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 11:36:38,657] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:36:39,846] {logging_mixin.py:115} INFO - [2022-08-20 11:36:39,843] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 11:36:40,409] {logging_mixin.py:115} INFO - [2022-08-20 11:36:40,379] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T09:00:00+00:00, run_after=2022-08-20T12:00:00+00:00
+[2022-08-20 11:36:40,620] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 3.040 seconds
+[2022-08-20 11:37:12,721] {processor.py:153} INFO - Started process (PID=11362) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:37:12,801] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 11:37:13,046] {logging_mixin.py:115} INFO - [2022-08-20 11:37:13,046] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:37:13,785] {logging_mixin.py:115} INFO - [2022-08-20 11:37:13,785] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 11:37:14,537] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:37:17,633] {logging_mixin.py:115} INFO - [2022-08-20 11:37:17,633] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 11:37:19,076] {logging_mixin.py:115} INFO - [2022-08-20 11:37:19,076] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T09:00:00+00:00, run_after=2022-08-20T12:00:00+00:00
+[2022-08-20 11:37:19,790] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 7.495 seconds
+[2022-08-20 11:37:51,005] {processor.py:153} INFO - Started process (PID=11409) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:37:51,012] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 11:37:51,015] {logging_mixin.py:115} INFO - [2022-08-20 11:37:51,015] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:37:51,278] {logging_mixin.py:115} INFO - [2022-08-20 11:37:51,278] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 11:37:51,603] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:37:52,261] {logging_mixin.py:115} INFO - [2022-08-20 11:37:52,261] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 11:37:52,396] {logging_mixin.py:115} INFO - [2022-08-20 11:37:52,396] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T09:00:00+00:00, run_after=2022-08-20T12:00:00+00:00
+[2022-08-20 11:37:52,561] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 1.569 seconds
+[2022-08-20 11:38:22,998] {processor.py:153} INFO - Started process (PID=11464) to work on /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:38:23,000] {processor.py:641} INFO - Processing file /opt/airflow/dags/yandex_dag.py for tasks to queue
+[2022-08-20 11:38:23,007] {logging_mixin.py:115} INFO - [2022-08-20 11:38:23,006] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:38:23,121] {logging_mixin.py:115} INFO - [2022-08-20 11:38:23,121] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-08-20 11:38:23,340] {processor.py:651} INFO - DAG(s) dict_keys(['yandex-rates-test']) retrieved from /opt/airflow/dags/yandex_dag.py
+[2022-08-20 11:38:23,509] {logging_mixin.py:115} INFO - [2022-08-20 11:38:23,508] {dag.py:2420} INFO - Sync 1 DAGs
+[2022-08-20 11:38:23,553] {logging_mixin.py:115} INFO - [2022-08-20 11:38:23,553] {dag.py:2972} INFO - Setting next_dagrun for yandex-rates-test to 2022-08-20T09:00:00+00:00, run_after=2022-08-20T12:00:00+00:00
+[2022-08-20 11:38:23,577] {processor.py:161} INFO - Processing /opt/airflow/dags/yandex_dag.py took 0.586 seconds

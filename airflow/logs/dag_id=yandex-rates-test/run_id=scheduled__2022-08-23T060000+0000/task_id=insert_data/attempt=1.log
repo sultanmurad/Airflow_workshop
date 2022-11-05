@@ -1,0 +1,26 @@
+[2022-08-23 09:24:24,721] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.insert_data scheduled__2022-08-23T06:00:00+00:00 [queued]>
+[2022-08-23 09:24:25,132] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.insert_data scheduled__2022-08-23T06:00:00+00:00 [queued]>
+[2022-08-23 09:24:25,150] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-23 09:24:25,164] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-08-23 09:24:25,165] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-23 09:24:25,797] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): insert_data> on 2022-08-23 06:00:00+00:00
+[2022-08-23 09:24:26,003] {standard_task_runner.py:52} INFO - Started process 4987 to run task
+[2022-08-23 09:24:26,112] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'insert_data', 'scheduled__2022-08-23T06:00:00+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag.py', '--cfg-path', '/tmp/tmp6jzv3z38', '--error-file', '/tmp/tmpigm2uzqv']
+[2022-08-23 09:24:26,116] {standard_task_runner.py:80} INFO - Job 53: Subtask insert_data
+[2022-08-23 09:24:28,145] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.insert_data scheduled__2022-08-23T06:00:00+00:00 [running]> on host 00f41d9230c6
+[2022-08-23 09:24:31,706] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=insert_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-23T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-23T06:00:00+00:00
+[2022-08-23 09:24:32,160] {logging_mixin.py:115} INFO - rate_date:  2022-08-23
+[2022-08-23 09:24:32,231] {logging_mixin.py:115} INFO - value_:  21132.95744700000068
+[2022-08-23 09:24:32,472] {base.py:68} INFO - Using connection ID 'postgre_test_db' for task execution.
+[2022-08-23 09:24:32,780] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-23 09:24:34,361] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=insert_data, execution_date=20220823T060000, start_date=20220823T092424, end_date=20220823T092434
+[2022-08-23 09:24:35,458] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-23 09:24:36,796] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

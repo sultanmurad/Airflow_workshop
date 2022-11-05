@@ -1,0 +1,22 @@
+[2022-08-20 07:38:01,856] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.import_rates scheduled__2022-08-20T03:00:00+00:00 [queued]>
+[2022-08-20 07:38:02,953] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.import_rates scheduled__2022-08-20T03:00:00+00:00 [queued]>
+[2022-08-20 07:38:03,003] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-20 07:38:03,005] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-08-20 07:38:03,033] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-20 07:38:04,421] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): import_rates> on 2022-08-20 03:00:00+00:00
+[2022-08-20 07:38:04,673] {standard_task_runner.py:52} INFO - Started process 4564 to run task
+[2022-08-20 07:38:04,868] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'import_rates', 'scheduled__2022-08-20T03:00:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag.py', '--cfg-path', '/tmp/tmp3z92r53x', '--error-file', '/tmp/tmpdwgjgzrz']
+[2022-08-20 07:38:04,889] {standard_task_runner.py:80} INFO - Job 30: Subtask import_rates
+[2022-08-20 07:38:12,264] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.import_rates scheduled__2022-08-20T03:00:00+00:00 [running]> on host 00f41d9230c6
+[2022-08-20 07:38:27,464] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=import_rates
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-20T03:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-20T03:00:00+00:00
+[2022-08-20 07:38:41,353] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-20 07:38:44,865] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=import_rates, execution_date=20220820T030000, start_date=20220820T073801, end_date=20220820T073844
+[2022-08-20 07:38:48,040] {local_task_job.py:221} WARNING - State of this instance has been externally set to success. Terminating instance.

@@ -1,0 +1,3 @@
+[2022-08-28 13:11:52,289] {processor.py:153} INFO - Started process (PID=41687) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-08-28 13:11:52,386] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2022-08-28 13:11:53,654] {logging_mixin.py:115} INFO - [2022-08-28 13:11:53,457] {dagbag.py:508} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
