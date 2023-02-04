@@ -1,0 +1,23 @@
+[2023-02-04 06:38:30,182] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.import_rates manual__2023-02-04T06:38:28.590178+00:00 [queued]>
+[2023-02-04 06:38:30,190] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.import_rates manual__2023-02-04T06:38:28.590178+00:00 [queued]>
+[2023-02-04 06:38:30,190] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 06:38:30,191] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-02-04 06:38:30,191] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 06:38:30,204] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): import_rates> on 2023-02-04 06:38:28.590178+00:00
+[2023-02-04 06:38:30,208] {standard_task_runner.py:52} INFO - Started process 3209 to run task
+[2023-02-04 06:38:30,210] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'import_rates', 'manual__2023-02-04T06:38:28.590178+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmpwcqqclsz', '--error-file', '/tmp/tmpqmsgyogy']
+[2023-02-04 06:38:30,211] {standard_task_runner.py:80} INFO - Job 50: Subtask import_rates
+[2023-02-04 06:38:30,268] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.import_rates manual__2023-02-04T06:38:28.590178+00:00 [running]> on host 39df186e1726
+[2023-02-04 06:38:30,327] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=import_rates
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T06:38:28.590178+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-04T06:38:28.590178+00:00
+[2023-02-04 06:38:31,076] {python.py:173} INFO - Done. Returned value was: None
+[2023-02-04 06:38:31,086] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=import_rates, execution_date=20230204T063828, start_date=20230204T063830, end_date=20230204T063831
+[2023-02-04 06:38:31,106] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-02-04 06:38:31,143] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

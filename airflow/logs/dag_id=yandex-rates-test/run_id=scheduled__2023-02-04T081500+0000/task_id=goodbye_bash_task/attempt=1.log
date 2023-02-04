@@ -1,0 +1,28 @@
+[2023-02-04 08:20:08,308] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.goodbye_bash_task scheduled__2023-02-04T08:15:00+00:00 [queued]>
+[2023-02-04 08:20:08,324] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.goodbye_bash_task scheduled__2023-02-04T08:15:00+00:00 [queued]>
+[2023-02-04 08:20:08,324] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 08:20:08,325] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-02-04 08:20:08,326] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 08:20:08,342] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): goodbye_bash_task> on 2023-02-04 08:15:00+00:00
+[2023-02-04 08:20:08,347] {standard_task_runner.py:52} INFO - Started process 8453 to run task
+[2023-02-04 08:20:08,351] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'goodbye_bash_task', 'scheduled__2023-02-04T08:15:00+00:00', '--job-id', '220', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmp7z_j2a7i', '--error-file', '/tmp/tmpkvnj85t7']
+[2023-02-04 08:20:08,352] {standard_task_runner.py:80} INFO - Job 220: Subtask goodbye_bash_task
+[2023-02-04 08:20:08,427] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.goodbye_bash_task scheduled__2023-02-04T08:15:00+00:00 [running]> on host 39df186e1726
+[2023-02-04 08:20:08,513] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=goodbye_bash_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T08:15:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-02-04T08:15:00+00:00
+[2023-02-04 08:20:08,515] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-02-04 08:20:08,516] {subprocess.py:74} INFO - Running command: ['bash', '-c', "echo 'Goodbye, World!'"]
+[2023-02-04 08:20:08,524] {subprocess.py:85} INFO - Output:
+[2023-02-04 08:20:08,525] {subprocess.py:92} INFO - Goodbye, World!
+[2023-02-04 08:20:08,526] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-02-04 08:20:08,561] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=goodbye_bash_task, execution_date=20230204T081500, start_date=20230204T082008, end_date=20230204T082008
+[2023-02-04 08:20:08,604] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-02-04 08:20:08,644] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

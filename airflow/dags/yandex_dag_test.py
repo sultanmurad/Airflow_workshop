@@ -9,9 +9,11 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.postgres_operator import PostgresOperator
 from airflow.sensors.sql_sensor import SqlSensor
+from airflow.sensors.python import PythonSensor
 from airflow.models import Variable
 from airflow.utils.dates import days_ago
 from airflow.hooks.base import BaseHook
+from airflow.exceptions import AirflowSensorTimeout
 
 import requests
 import decimal
@@ -36,8 +38,6 @@ variables = Variable.set(key="currency_load_variables",
                          serialize_json=True)
 dag_variables = Variable.get("currency_load_variables", deserialize_json=True)
 
-
-
 url_base = 'https://api.exchangerate.host/'
 
 table_name = 'rates'
@@ -50,6 +50,20 @@ pg_username = 'postgres'
 pg_pass = 'password'
 pg_db = 'test'
 
+
+def get_rates_rows_cnt():
+    pg_conn = get_conn_credentials(dag_variables.get('connection_name'))
+    pg_hostname, pg_port, pg_username, pg_pass, pg_db = pg_conn.host, pg_conn.port, pg_conn.login, pg_conn.password, pg_conn.schema
+    conn = psycopg2.connect(host=pg_hostname, port=pg_port, user=pg_username, password=pg_pass, database=pg_db)
+    
+    cursor = conn.cursor()
+    cursor.execute(f"SELECT count(*) FROM {dag_variables.get('table_name')}")
+    rates_cnt_rows = cursor.fetchall()[0][0]
+    print(rates_cnt_rows)
+    Variable.set("rates_rows_cnt", rates_cnt_rows)
+
+    cursor.close()
+    conn.close()
 
 """
 Save rates in pustgresql
@@ -69,9 +83,10 @@ def insert_data(**kwargs):
     
     cursor = conn.cursor()
     cursor.execute(f"INSERT INTO {dag_variables.get('table_name')} (ingest_datetime, rate_date, rate_base, rate_target, value_ ) valueS('{ingest_datetime}','{results['rate_date']}', '{dag_variables.get('rate_base')}', '{dag_variables.get('rate_target')}', '{results['value_']}');")
-    conn.commit() 
+    conn.commit()
+
     cursor.close()
-    conn.close()    
+    conn.close()
     
 """
 Run uploading code from exchangerate.host API
@@ -105,29 +120,33 @@ def get_conn_credentials(conn_id) -> BaseHook.get_connection:
     conn = BaseHook.get_connection(conn_id)
     return conn
 
+def check_rates_cnt_change():
+    pg_conn = get_conn_credentials(dag_variables.get('connection_name'))
+    pg_hostname, pg_port, pg_username, pg_pass, pg_db = pg_conn.host, pg_conn.port, pg_conn.login, pg_conn.password, pg_conn.schema
+    conn = psycopg2.connect(host=pg_hostname, port=pg_port, user=pg_username, password=pg_pass, database=pg_db)
+    
+    cursor = conn.cursor()
+    cursor.execute(f"SELECT count(*) FROM {dag_variables.get('table_name')}")
+    temp_rates_cnt_rows = cursor.fetchall()[0][0]
+    print(Variable.get("rates_rows_cnt"), temp_rates_cnt_rows)
+
+    cursor.close()
+    conn.close()
+
+    if temp_rates_cnt_rows > int(Variable.get("rates_rows_cnt")):
+        return True
+    else:
+        return False
+
+def _failure_callback(context):
+    if isinstance(context['exception'], AirflowSensorTimeout):
+        print(context)
+        print("Sensor timed out")
+
 """
 Identify Airflow DAG
 """
-with DAG(dag_id="yandex-rates-test", schedule_interval="0 */3 * * *",
-    default_args=default_args, tags=["yandex","test"], catchup=False
-) as dag:
-    dag.doc_md = __doc__
-
-    create_dir = BashOperator(task_id = 'bash_task',
-                 bash_command = "mkdir C:\\Users\\AbduevSA-LA\\Desktop\\Yandex\\Airflow_workshop\\workshop_airflow-main\\airflow\\airflow_workshop_files")
-
-    import_rates_from_api = PythonOperator(
-                task_id="import_rates",
-                python_callable=import_codes)
-    
-    insert_rates_to_pg = PythonOperator(
-                task_id="insert_data",
-                python_callable=insert_data)
-    
-"""
-Identify Airflow DAG
-"""
-with DAG(dag_id="yandex-rates-test", schedule_interval="0 */3 * * *",
+with DAG(dag_id="yandex-rates-test", schedule_interval = "*/5 * * * *",
     default_args=default_args, tags=["yandex","test"], catchup=False
 ) as dag:
     dag.doc_md = __doc__
@@ -135,26 +154,40 @@ with DAG(dag_id="yandex-rates-test", schedule_interval="0 */3 * * *",
     hello_bash_task = BashOperator(task_id = 'bash_task',
                  bash_command = "echo 'Hello, World!'")
 
+    get_rates_rows_cnt_task = PythonOperator(
+                task_id = "get_rates_rows_cnt",
+                python_callable = get_rates_rows_cnt)
+
     import_rates_from_api = PythonOperator(
-                task_id="import_rates",
-                python_callable=import_codes)
+                task_id = "import_rates",
+                python_callable = import_codes)
     
-    insert_rates_to_pg = PythonOperator(
-                task_id="insert_data",
-                python_callable=insert_data)
+    # insert_rates_to_pg = PythonOperator(
+    #             task_id="insert_data",
+    #             python_callable=insert_data)
 
-    sql_sensor = SqlSensor(
-        task_id='sql_sensor_check',
-        poke_interval=60,
-        timeout=180,
-        soft_fail=False,
-        retries=2,
-        sql="select count(*) from rates",
-        conn_id='my_db_conn',
-    dag=dag)
+    python_sensor = PythonSensor(task_id='python_sensor',
+                                 poke_interval=60,
+                                 timeout=10,
+                                 retries=2,
+                                 mode="poke",
+                                 python_callable = check_rates_cnt_change,
+                                 on_failure_callback= _failure_callback,
+                                 soft_fail = True)
 
-    goodbye_bash_task = BashOperator(task_id = 'bash_task2',
-                 bash_command = "echo 'Goodbye, World!'")
+    goodbye_bash_task = BashOperator(task_id = 'goodbye_bash_task',
+                bash_command = "echo 'Goodbye, World!'")
+
+    # sql_sensor = SqlSensor(
+    #     mode = 'poke',
+    #     task_id='sql_sensor_check',
+    #     poke_interval=60,
+    #     timeout=120,
+    #     soft_fail=False,
+    #     retries=2,
+    #     sql=f"select * from rates",
+    #     conn_id='my_db_conn',
+    # dag=dag)
 
     # create_new_table = PostgresOperator(
     #     task_id='create_new_table',
@@ -165,6 +198,6 @@ with DAG(dag_id="yandex-rates-test", schedule_interval="0 */3 * * *",
     #                 PRIMARY KEY (id)
     #             );""")
 
-    hello_bash_task >> import_rates_from_api >> insert_rates_to_pg >> sql_sensor >> goodbye_bash_task
-    #   >> sql_sensor >> create_new_table#>> hello_bash_task
-    #create_new_table
+get_rates_rows_cnt_task >> hello_bash_task >> import_rates_from_api >> python_sensor >> goodbye_bash_task
+    
+    #  >> get_rates_rows_cnt_task >> import_rates_from_api >> insert_rates_to_pg >> python_sensor >> goodbye_bash_task

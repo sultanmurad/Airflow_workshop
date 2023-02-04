@@ -1,0 +1,26 @@
+[2023-02-04 08:10:06,395] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.python_sensor scheduled__2023-02-04T08:05:00+00:00 [queued]>
+[2023-02-04 08:10:06,409] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.python_sensor scheduled__2023-02-04T08:05:00+00:00 [queued]>
+[2023-02-04 08:10:06,410] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 08:10:06,411] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-02-04 08:10:06,411] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 08:10:06,430] {taskinstance.py:1397} INFO - Executing <Task(PythonSensor): python_sensor> on 2023-02-04 08:05:00+00:00
+[2023-02-04 08:10:06,434] {standard_task_runner.py:52} INFO - Started process 7968 to run task
+[2023-02-04 08:10:06,438] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'python_sensor', 'scheduled__2023-02-04T08:05:00+00:00', '--job-id', '207', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmpbzferwwy', '--error-file', '/tmp/tmprno721ir']
+[2023-02-04 08:10:06,439] {standard_task_runner.py:80} INFO - Job 207: Subtask python_sensor
+[2023-02-04 08:10:06,536] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.python_sensor scheduled__2023-02-04T08:05:00+00:00 [running]> on host 39df186e1726
+[2023-02-04 08:10:06,638] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=python_sensor
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T08:05:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-02-04T08:05:00+00:00
+[2023-02-04 08:10:06,640] {python.py:66} INFO - Poking callable: <function check_rates_cnt_change at 0x7f1e0366d710>
+[2023-02-04 08:10:06,650] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 08:10:06,689] {logging_mixin.py:115} INFO - 29 30
+[2023-02-04 08:10:06,698] {base.py:301} INFO - Success criteria met. Exiting.
+[2023-02-04 08:10:06,713] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=python_sensor, execution_date=20230204T080500, start_date=20230204T081006, end_date=20230204T081006
+[2023-02-04 08:10:06,771] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-02-04 08:10:06,828] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

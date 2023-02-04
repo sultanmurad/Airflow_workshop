@@ -1,0 +1,23 @@
+[2023-02-04 07:50:02,712] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.import_rates scheduled__2023-02-04T07:45:00+00:00 [queued]>
+[2023-02-04 07:50:02,721] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.import_rates scheduled__2023-02-04T07:45:00+00:00 [queued]>
+[2023-02-04 07:50:02,722] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:50:02,723] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-02-04 07:50:02,723] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:50:02,738] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): import_rates> on 2023-02-04 07:45:00+00:00
+[2023-02-04 07:50:02,742] {standard_task_runner.py:52} INFO - Started process 6964 to run task
+[2023-02-04 07:50:02,745] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'import_rates', 'scheduled__2023-02-04T07:45:00+00:00', '--job-id', '181', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmp6bmjke1g', '--error-file', '/tmp/tmplfi11ed3']
+[2023-02-04 07:50:02,746] {standard_task_runner.py:80} INFO - Job 181: Subtask import_rates
+[2023-02-04 07:50:02,810] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.import_rates scheduled__2023-02-04T07:45:00+00:00 [running]> on host 39df186e1726
+[2023-02-04 07:50:02,882] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=import_rates
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T07:45:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-02-04T07:45:00+00:00
+[2023-02-04 07:50:03,542] {python.py:173} INFO - Done. Returned value was: None
+[2023-02-04 07:50:03,552] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=import_rates, execution_date=20230204T074500, start_date=20230204T075002, end_date=20230204T075003
+[2023-02-04 07:50:03,603] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-02-04 07:50:03,642] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

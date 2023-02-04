@@ -1,0 +1,41 @@
+[2023-02-04 07:14:28,130] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.sql_sensor_check manual__2023-02-04T07:04:20.219519+00:00 [queued]>
+[2023-02-04 07:14:28,140] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.sql_sensor_check manual__2023-02-04T07:04:20.219519+00:00 [queued]>
+[2023-02-04 07:14:28,140] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:14:28,141] {taskinstance.py:1377} INFO - Starting attempt 3 of 3
+[2023-02-04 07:14:28,141] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:14:28,156] {taskinstance.py:1397} INFO - Executing <Task(SqlSensor): sql_sensor_check> on 2023-02-04 07:04:20.219519+00:00
+[2023-02-04 07:14:28,160] {standard_task_runner.py:52} INFO - Started process 5065 to run task
+[2023-02-04 07:14:28,162] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'sql_sensor_check', 'manual__2023-02-04T07:04:20.219519+00:00', '--job-id', '101', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmpfkp337is', '--error-file', '/tmp/tmpm97kkqsb']
+[2023-02-04 07:14:28,163] {standard_task_runner.py:80} INFO - Job 101: Subtask sql_sensor_check
+[2023-02-04 07:14:28,219] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.sql_sensor_check manual__2023-02-04T07:04:20.219519+00:00 [running]> on host 39df186e1726
+[2023-02-04 07:14:28,284] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=sql_sensor_check
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T07:04:20.219519+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-04T07:04:20.219519+00:00
+[2023-02-04 07:14:28,292] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 07:14:28,334] {sql.py:92} INFO - Poking: select * from rates where ingest_datetime > 2023-02-04 07:11:50 (with parameters None)
+[2023-02-04 07:14:28,339] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 07:14:28,354] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 277, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/sql.py", line 93, in poke
+    records = hook.get_records(self.sql, self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 162, in get_records
+    cur.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "07"
+LINE 1: ...ect * from rates where ingest_datetime > 2023-02-04 07:11:50
+                                                               ^
+
+[2023-02-04 07:14:28,361] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=yandex-rates-test, task_id=sql_sensor_check, execution_date=20230204T070420, start_date=20230204T071428, end_date=20230204T071428
+[2023-02-04 07:14:28,372] {standard_task_runner.py:97} ERROR - Failed to execute job 101 for task sql_sensor_check (syntax error at or near "07"
+LINE 1: ...ect * from rates where ingest_datetime > 2023-02-04 07:11:50
+                                                               ^
+; 5065)
+[2023-02-04 07:14:28,415] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-02-04 07:14:28,459] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

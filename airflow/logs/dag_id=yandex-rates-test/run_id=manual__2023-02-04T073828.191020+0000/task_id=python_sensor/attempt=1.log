@@ -1,0 +1,25 @@
+[2023-02-04 07:38:34,711] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.python_sensor manual__2023-02-04T07:38:28.191020+00:00 [queued]>
+[2023-02-04 07:38:34,719] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.python_sensor manual__2023-02-04T07:38:28.191020+00:00 [queued]>
+[2023-02-04 07:38:34,720] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:38:34,720] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-02-04 07:38:34,721] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:38:34,735] {taskinstance.py:1397} INFO - Executing <Task(PythonSensor): python_sensor> on 2023-02-04 07:38:28.191020+00:00
+[2023-02-04 07:38:34,740] {standard_task_runner.py:52} INFO - Started process 6336 to run task
+[2023-02-04 07:38:34,743] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'python_sensor', 'manual__2023-02-04T07:38:28.191020+00:00', '--job-id', '151', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmp2jd862zk', '--error-file', '/tmp/tmp8sggjmwn']
+[2023-02-04 07:38:34,744] {standard_task_runner.py:80} INFO - Job 151: Subtask python_sensor
+[2023-02-04 07:38:34,805] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.python_sensor manual__2023-02-04T07:38:28.191020+00:00 [running]> on host 39df186e1726
+[2023-02-04 07:38:34,867] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=python_sensor
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T07:38:28.191020+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-04T07:38:28.191020+00:00
+[2023-02-04 07:38:34,876] {python.py:66} INFO - Poking callable: <function check_rates_cnt_change at 0x7f1e0366b4d0>
+[2023-02-04 07:38:34,883] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 07:38:34,904] {logging_mixin.py:115} INFO - 20 21
+[2023-02-04 07:38:34,927] {taskinstance.py:1873} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2023-02-04 07:38:34,956] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-02-04 07:38:34,995] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,29 @@
+[2023-02-04 09:55:05,384] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.python_sensor scheduled__2023-02-04T09:50:00+00:00 [queued]>
+[2023-02-04 09:55:05,392] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.python_sensor scheduled__2023-02-04T09:50:00+00:00 [queued]>
+[2023-02-04 09:55:05,393] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 09:55:05,393] {taskinstance.py:1377} INFO - Starting attempt 1 of 3
+[2023-02-04 09:55:05,394] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 09:55:05,407] {taskinstance.py:1397} INFO - Executing <Task(PythonSensor): python_sensor> on 2023-02-04 09:50:00+00:00
+[2023-02-04 09:55:05,410] {standard_task_runner.py:52} INFO - Started process 13096 to run task
+[2023-02-04 09:55:05,413] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'python_sensor', 'scheduled__2023-02-04T09:50:00+00:00', '--job-id', '316', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmp39ikgmpq', '--error-file', '/tmp/tmpdy1i5txc']
+[2023-02-04 09:55:05,413] {standard_task_runner.py:80} INFO - Job 316: Subtask python_sensor
+[2023-02-04 09:55:05,469] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.python_sensor scheduled__2023-02-04T09:50:00+00:00 [running]> on host 39df186e1726
+[2023-02-04 09:55:05,529] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=python_sensor
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T09:50:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-02-04T09:50:00+00:00
+[2023-02-04 09:55:05,530] {python.py:66} INFO - Poking callable: <function check_rates_cnt_change at 0x7f1e0381e3b0>
+[2023-02-04 09:55:05,538] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 09:55:05,559] {logging_mixin.py:115} INFO - 41 41
+[2023-02-04 09:56:05,623] {python.py:66} INFO - Poking callable: <function check_rates_cnt_change at 0x7f1e0381e3b0>
+[2023-02-04 09:56:05,638] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 09:56:05,658] {logging_mixin.py:115} INFO - 41 41
+[2023-02-04 09:56:05,663] {taskinstance.py:1498} INFO - Snap. Time is OUT. DAG id: yandex-rates-test
+[2023-02-04 09:56:05,673] {taskinstance.py:1420} INFO - Marking task as SKIPPED. dag_id=yandex-rates-test, task_id=python_sensor, execution_date=20230204T095000, start_date=20230204T095505, end_date=20230204T095605
+[2023-02-04 09:56:05,725] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-02-04 09:56:05,810] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

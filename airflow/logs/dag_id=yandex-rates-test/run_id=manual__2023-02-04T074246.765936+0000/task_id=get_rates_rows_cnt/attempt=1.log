@@ -1,0 +1,25 @@
+[2023-02-04 07:42:49,125] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.get_rates_rows_cnt manual__2023-02-04T07:42:46.765936+00:00 [queued]>
+[2023-02-04 07:42:49,132] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.get_rates_rows_cnt manual__2023-02-04T07:42:46.765936+00:00 [queued]>
+[2023-02-04 07:42:49,133] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:42:49,133] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-02-04 07:42:49,134] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:42:49,146] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_rates_rows_cnt> on 2023-02-04 07:42:46.765936+00:00
+[2023-02-04 07:42:49,151] {standard_task_runner.py:52} INFO - Started process 6588 to run task
+[2023-02-04 07:42:49,154] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'get_rates_rows_cnt', 'manual__2023-02-04T07:42:46.765936+00:00', '--job-id', '168', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmp8gfptc_n', '--error-file', '/tmp/tmpefihx5yc']
+[2023-02-04 07:42:49,154] {standard_task_runner.py:80} INFO - Job 168: Subtask get_rates_rows_cnt
+[2023-02-04 07:42:49,257] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.get_rates_rows_cnt manual__2023-02-04T07:42:46.765936+00:00 [running]> on host 39df186e1726
+[2023-02-04 07:42:49,317] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=get_rates_rows_cnt
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T07:42:46.765936+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-04T07:42:46.765936+00:00
+[2023-02-04 07:42:49,326] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 07:42:49,340] {logging_mixin.py:115} INFO - 23
+[2023-02-04 07:42:49,350] {python.py:173} INFO - Done. Returned value was: None
+[2023-02-04 07:42:49,361] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=get_rates_rows_cnt, execution_date=20230204T074246, start_date=20230204T074249, end_date=20230204T074249
+[2023-02-04 07:42:49,406] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-02-04 07:42:49,444] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

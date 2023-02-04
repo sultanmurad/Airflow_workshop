@@ -1,0 +1,35 @@
+[2023-02-04 07:37:29,049] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.python_sensor manual__2023-02-04T07:37:23.632234+00:00 [queued]>
+[2023-02-04 07:37:29,057] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.python_sensor manual__2023-02-04T07:37:23.632234+00:00 [queued]>
+[2023-02-04 07:37:29,058] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:37:29,058] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-02-04 07:37:29,059] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 07:37:29,074] {taskinstance.py:1397} INFO - Executing <Task(PythonSensor): python_sensor> on 2023-02-04 07:37:23.632234+00:00
+[2023-02-04 07:37:29,078] {standard_task_runner.py:52} INFO - Started process 6280 to run task
+[2023-02-04 07:37:29,080] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'python_sensor', 'manual__2023-02-04T07:37:23.632234+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmpo_a9fnrk', '--error-file', '/tmp/tmp5t_yb4mm']
+[2023-02-04 07:37:29,081] {standard_task_runner.py:80} INFO - Job 146: Subtask python_sensor
+[2023-02-04 07:37:29,138] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.python_sensor manual__2023-02-04T07:37:23.632234+00:00 [running]> on host 39df186e1726
+[2023-02-04 07:37:29,199] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=python_sensor
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T07:37:23.632234+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-04T07:37:23.632234+00:00
+[2023-02-04 07:37:29,208] {python.py:66} INFO - Poking callable: <function check_rates_cnt_change at 0x7f1e0366b4d0>
+[2023-02-04 07:37:29,217] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 07:37:29,240] {logging_mixin.py:115} INFO - [(19,)] 20
+[2023-02-04 07:37:29,246] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 277, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/python.py", line 67, in poke
+    return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/yandex_dag_test.py", line 136, in check_rates_cnt_change
+    if int(Variable.get("rates_rows_cnt")) > temp_rates_cnt_rows:
+ValueError: invalid literal for int() with base 10: '[(19,)]'
+[2023-02-04 07:37:29,254] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=yandex-rates-test, task_id=python_sensor, execution_date=20230204T073723, start_date=20230204T073729, end_date=20230204T073729
+[2023-02-04 07:37:29,265] {standard_task_runner.py:97} ERROR - Failed to execute job 146 for task python_sensor (invalid literal for int() with base 10: '[(19,)]'; 6280)
+[2023-02-04 07:37:29,293] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-02-04 07:37:29,338] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

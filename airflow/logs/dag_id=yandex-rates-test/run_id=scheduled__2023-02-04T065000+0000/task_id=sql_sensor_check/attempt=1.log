@@ -1,0 +1,26 @@
+[2023-02-04 06:57:21,889] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.sql_sensor_check scheduled__2023-02-04T06:50:00+00:00 [queued]>
+[2023-02-04 06:57:21,900] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: yandex-rates-test.sql_sensor_check scheduled__2023-02-04T06:50:00+00:00 [queued]>
+[2023-02-04 06:57:21,900] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 06:57:21,901] {taskinstance.py:1377} INFO - Starting attempt 1 of 3
+[2023-02-04 06:57:21,901] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04 06:57:21,916] {taskinstance.py:1397} INFO - Executing <Task(SqlSensor): sql_sensor_check> on 2023-02-04 06:50:00+00:00
+[2023-02-04 06:57:21,977] {standard_task_runner.py:52} INFO - Started process 4171 to run task
+[2023-02-04 06:57:21,980] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yandex-rates-test', 'sql_sensor_check', 'scheduled__2023-02-04T06:50:00+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/yandex_dag_test.py', '--cfg-path', '/tmp/tmp8z0mv5sn', '--error-file', '/tmp/tmp_jd12hfz']
+[2023-02-04 06:57:21,981] {standard_task_runner.py:80} INFO - Job 70: Subtask sql_sensor_check
+[2023-02-04 06:57:22,065] {task_command.py:371} INFO - Running <TaskInstance: yandex-rates-test.sql_sensor_check scheduled__2023-02-04T06:50:00+00:00 [running]> on host 39df186e1726
+[2023-02-04 06:57:22,154] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yandex-rates-test
+AIRFLOW_CTX_TASK_ID=sql_sensor_check
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T06:50:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-02-04T06:50:00+00:00
+[2023-02-04 06:57:22,164] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 06:57:22,220] {sql.py:92} INFO - Poking: select count(*) from rates (with parameters None)
+[2023-02-04 06:57:22,225] {base.py:68} INFO - Using connection ID 'my_db_conn' for task execution.
+[2023-02-04 06:57:22,252] {base.py:301} INFO - Success criteria met. Exiting.
+[2023-02-04 06:57:22,263] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=yandex-rates-test, task_id=sql_sensor_check, execution_date=20230204T065000, start_date=20230204T065721, end_date=20230204T065722
+[2023-02-04 06:57:22,313] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-02-04 06:57:22,348] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
